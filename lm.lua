@@ -65,7 +65,7 @@ local SAFE_ENV = (function()
 		"love.physics",
 		"love.sound",
 		"love.system",
-		"love.thread",
+		-- "love.thread",
 		"love.timer",
 		"love.touch",
 		-- "love.video",
