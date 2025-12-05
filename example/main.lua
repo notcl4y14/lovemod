@@ -1,7 +1,13 @@
 local modapi = require("api")
 
 function love.load()
+	print("Loading mods...")
 	modapi.LoadModDirectory("mods")
+
+	print("Loaded mods:")
+	for _, mod in pairs(modapi.GetMods()) do
+		print("- \""..mod._NAME.."\"\tv"..mod._VERSION)
+	end
 
 	for _, mod in pairs(modapi.GetMods()) do
 		if mod.load then mod.load() end

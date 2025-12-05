@@ -54,7 +54,7 @@ local function LoadMod(directory)
 	local res, err = lm.LoadMod(module_func, directory)
 
 	if res == nil then
-		return false, err
+		return false, directory..": "..err
 	end
 
 	if res._NAME == nil then
